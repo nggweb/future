@@ -8,4 +8,47 @@
       <h2><a href="{{ book.get_absolute_url }}">{{ book.title }}</a></h2>
     </div>
   {% endfor %}
+
+
+    <div class="container-fluid">
+      {% for book in book_list %}
+        <div class="row" data-masonry='{"percentPosition": true }'>
+            <div class="col-md-3">
+                <div class="card my-3">
+                    
+                    <img src="{{ book.cover.url}}" alt="{{ book.title }}" class="img-fluid" alt="thumbnail">
+                    <div class="card-body">
+                        <h2><a href="{{ book.get_absolute_url }}">{{ book.title }}</a></h2>
+                        <p class="card-text">Lorem Ipsum is simply dummy text of the printing and typesetting industry.
+                            Lorem Ipsum has been the industry's standard dummy toscrambled</p>
+                        <a href="#" class="btn btn-primary">Read More</a>
+                    </div>
+                </div>
+            </div>
+          </div>
+        </div>
+      {% endfor %}
+
 {% endblock content %}
+
+
+   <!-- <div class="container-fluid">
+      {% for book in book_list %}
+        <div class="row" data-masonry='{"percentPosition": true }'>
+            <div class="col-md-3">
+                <div class="card my-3">
+                    
+                    <img src="{{ book.cover.url}}" alt="{{ book.title }}" class="img-fluid" alt="thumbnail">
+                    <div class="card-body">
+                        <h3 class="card-title">Lorem, ipsum dolor.</h3>
+                        <p class="card-text">Lorem Ipsum is simply dummy text of the printing and typesetting industry.
+                            Lorem Ipsum has been the industry's standard dummy toscrambled</p>
+                        <a href="#" class="btn btn-primary">Read More</a>
+                    </div>
+                </div>
+            </div>
+          </div>
+        </div>
+      {% endfor %} -->
+
+      
