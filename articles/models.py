@@ -1,22 +1,23 @@
-import uuid  # new
-from django.contrib.auth import get_user_model  # new
+import uuid
+from django.contrib.auth import get_user_model
 from django.db import models
 from django.urls import reverse
 
 
 class Article(models.Model):
-    id = models.UUIDField(  # new
+    id = models.UUIDField(
         primary_key=True,
         default=uuid.uuid4,
-        editable=False)
+        editable=False
+    )
     title = models.CharField(max_length=200)
     author = models.CharField(max_length=200)
     price = models.DecimalField(max_digits=6, decimal_places=2)
-    cover = models.ImageField(upload_to="covers/", blank=True)  # new
+    cover = models.ImageField(upload_to="covers/", blank=True)
 
-    class Meta: 
-        indexes = [  # new
-            models.Index(fields=["id"], name="id_index"),
+    class Meta:
+        indexes = [
+            models.Index(fields=["id"], name="article_id_index"),
         ]
         permissions = [
             ("special_status", "Can read all articles"),
@@ -29,16 +30,17 @@ class Article(models.Model):
         return reverse("article_detail", args=[str(self.id)])
 
 
-class Review(models.Model):  # new
+class Review(models.Model):
     article = models.ForeignKey(
         Article,
         on_delete=models.CASCADE,
-        related_name="reviews",
+        related_name="reviews_received",
     )
     review = models.CharField(max_length=255)
     author = models.ForeignKey(
         get_user_model(),
         on_delete=models.CASCADE,
+        related_name="reviews_written",
     )
 
     def __str__(self):
