@@ -3,16 +3,17 @@
 {% block title %}Books{% endblock title %}
 
 {% block content %}
-  {% for book in book_list %}
+  <!--{% for book in book_list %}
     <div>
       <h2><a href="{{ book.get_absolute_url }}">{{ book.title }}</a></h2>
     </div>
-  {% endfor %}
+  {% endfor %}-->
 
-{% for book in book_list %}
+
     <div class="container-fluid">
       
         <div class="row" data-masonry='{"percentPosition": true }'>
+          {% for book in book_list %}
             <div class="col-md-3">
                 <div class="card my-3">
                     
@@ -25,8 +26,8 @@
                     </div>
                 </div>
             </div>
-          </div>
-        </div>
+          <!--</div>
+        </div>-->
       {% endfor %}
 
 {% endblock content %}
