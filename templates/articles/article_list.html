@@ -1,0 +1,33 @@
+{% extends '_base.html' %}
+
+{% block title %}Articles{% endblock title %}
+
+{% block content %}
+  <!--{% for article in article_list %}
+    <div>
+      <h2><a href="{{ article.get_absolute_url }}">{{ article.title }}</a></h2>
+    </div>
+  {% endfor %}-->
+
+
+    <div class="container-fluid">
+      
+        <div class="row" data-masonry='{"percentPosition": true }'>
+          {% for article in article_list %}
+            <div class="col-md-3">
+                <div class="card my-3">
+                    
+                    <img src="{{ article.cover.url}}" alt="{{ article.title }}" class="img-fluid" alt="thumbnail">
+                    <div class="card-body">
+                        <h2><a href="{{ article.get_absolute_url }}">{{ article.title }}</a></h2>
+                        <p class="card-text">Lorem Ipsum is simply dummy text of the printing and typesetting industry.
+                            Lorem Ipsum has been the industry's standard dummy toscrambled</p>
+                        <a href="#" class="btn btn-primary">Read More</a>
+                    </div>
+                </div>
+            </div>
+          <!--</div>
+        </div>-->
+      {% endfor %}
+
+{% endblock content %}
