@@ -7,10 +7,11 @@ class ReviewInline(admin.TabularInline):
 
 
 class ArticleAdmin(admin.ModelAdmin):
+    #list_display = ("title", "author", "body",)
     inlines = [
         ReviewInline,
     ]
-    list_display = ("title", "author", "price",)
+    list_display = ("title", "author", "body",)
 
 
 admin.site.register(Article, ArticleAdmin)

@@ -24,8 +24,8 @@ class ArticleDetailView(
     template_name = "articles/article_detail.html"
     login_url = "account_login"
     permission_required = "articles.special_status"  # new
-    queryset = Article.objects.all().prefetch_related('reviews__author',)  # new
-
+    #queryset = Article.objects.all().prefetch_related('reviews__author',)  # new
+    queryset = Article.objects.all().prefetch_related('reviews_received__author')
 
 class SearchResultsListView(ListView):  # new
     model = Article
@@ -37,3 +37,4 @@ class SearchResultsListView(ListView):  # new
         return Article.objects.filter(
             Q(title__icontains=query) | Q(author__icontains=query)
         )
+    

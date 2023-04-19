@@ -9,8 +9,8 @@
     {% endif %}
     <h2><a href="">{{ article.title }}</a></h2>
     <p>Author: {{ article.author }}</p>
-    <p>Price: {{ article.price }}</p>
-    <div>
+    <p>Body: {{ article.body }}</p>
+   <div>
       <h3>Reviews</h3>
       <ul>
         {% for review in article.reviews.all %}
