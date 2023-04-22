@@ -52,6 +52,7 @@ INSTALLED_APPS = [
     "pages.apps.PagesConfig",  # new
     "books.apps.BooksConfig",
     "articles.apps.ArticlesConfig",
+    "blog.apps.BlogConfig",
 ]
 
 MIDDLEWARE = [
