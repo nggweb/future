@@ -13,7 +13,18 @@ class Article(models.Model):
     title = models.CharField(max_length=200)
     author = models.CharField(max_length=200)
     #price = models.DecimalField(max_digits=6, decimal_places=2)
-    body = models.TextField(max_length=3000, null=True)
+    body = models.TextField(max_length=3000, null=True, blank=True)
+    body2 = models.TextField(max_length=3000, null=True, blank=True)
+    body3 = models.TextField(max_length=3000, null=True,blank=True)
+    body4 = models.TextField(max_length=3000, null=True, blank=True)
+    body5 = models.TextField(max_length=3000, null=True)
+    body6 = models.TextField(max_length=3000, null=True)
+    body7 = models.TextField(max_length=3000, null=True)
+    body8 = models.TextField(max_length=3000, null=True)
+    body9 = models.TextField(max_length=3000, null=True)
+    body10 = models.TextField(max_length=3000, null=True)
+
+
     cover = models.ImageField(upload_to="covers/", blank=True)
 
     class Meta:
