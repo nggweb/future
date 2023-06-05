@@ -1,6 +1,9 @@
 from django.shortcuts import render
 from .models import Post
 from django.shortcuts import render, get_object_or_404
+from django.views.generic import ListView
+
+
 
 def post_list(request):
     posts = Post.published.all()
@@ -18,3 +21,11 @@ def post_detail(request, id):
 
 
 
+class PostListView(ListView):
+    """
+    Alternative post list view
+    """
+    queryset = Post.published.all()
+    context_object_name = 'posts'
+    paginate_by = 3
+    template_name = 'blog/post/list.html'
