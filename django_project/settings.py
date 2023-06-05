@@ -46,7 +46,8 @@ INSTALLED_APPS = [
     "crispy_bootstrap5",  # new
     "allauth",  # new
     "allauth.account",  # new
-    "debug_toolbar",  # new
+    "debug_toolbar",
+    "taggit",  # new
      # new
     # Local
     "accounts.apps.AccountsConfig",  # new
