@@ -1,11 +1,10 @@
 
-from django.contrib.auth import get_user_model  # new
 from django.db import models
 
-#from django.db import models
+
 from django.utils import timezone
-#from django.contrib.auth.models import User
-#from django.contrib.auth import get_user_model
+from django.contrib.auth.models import User
+from django.contrib.auth import get_user_model
 
 class PublishedManager(models.Manager):
     def get_queryset(self):
@@ -32,6 +31,8 @@ class Post(models.Model):
 
     objects = models.Manager()
     published = PublishedManager()
+
+    #Define a sort order
     class Meta:
         ordering = ['-publish']
         indexes = [

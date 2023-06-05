@@ -47,6 +47,7 @@ INSTALLED_APPS = [
     "allauth",  # new
     "allauth.account",  # new
     "debug_toolbar",  # new
+     # new
     # Local
     "accounts.apps.AccountsConfig",  # new
     "pages.apps.PagesConfig",  # new
