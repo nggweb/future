@@ -31,6 +31,11 @@ DEBUG = env.bool("DJANGO_DEBUG", default=False)  # new
 ALLOWED_HOSTS = [ "localhost", "127.0.0.1", "0.0.0.0", "0.0.0.0:8000"]  # new
 
 
+
+
+
+
+
 # Application definition
 
 INSTALLED_APPS = [
@@ -55,6 +60,7 @@ INSTALLED_APPS = [
     "books.apps.BooksConfig",
     "articles.apps.ArticlesConfig",
     "blog.apps.BlogConfig",
+    'django.contrib.sitemaps',
 ]
 
 MIDDLEWARE = [
