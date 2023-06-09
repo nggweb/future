@@ -23,14 +23,21 @@ h2 {
 #content {
     float: left;
     width: 60%;
-    padding: 0 0 0 30px;
+    padding:0 0 0 30px;
+    
 }
 
 #sidebar {
-    float: right;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    right: 0;;
     width: 30%;
     background: #9999c1af;
-  
+    height: 100%;
+    padding: 8px;
+   
+
 }
 
 p.date {
