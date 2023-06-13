@@ -31,7 +31,7 @@ h2 {
     width: 30%;
     padding: 10px;
     background: #1d1d7c2a;
-    height: 80%;
+    height: 100%;
 }
 
 p.date {
@@ -100,5 +100,8 @@ input[type=submit] {
 .blog-card {
     border: 1px solid #ccc;
     border-radius: 4px;
+    height:100%;
+    width:100%;
   
 }
+

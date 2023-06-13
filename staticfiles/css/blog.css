@@ -23,21 +23,15 @@ h2 {
 #content {
     float: left;
     width: 60%;
-    padding:0 0 0 30px;
-    
+    padding: 0 0 0 30px;
 }
 
 #sidebar {
-    position: fixed;
-    z-index: 1;
-    top: 0;
-    right: 0;;
+    float: right;
     width: 30%;
-    background: #9999c1af;
+    padding: 10px;
+    background: #1d1d7c2a;
     height: 100%;
-    padding: 8px;
-   
-
 }
 
 p.date {
@@ -106,5 +100,8 @@ input[type=submit] {
 .blog-card {
     border: 1px solid #ccc;
     border-radius: 4px;
-    background-color: rgba(26, 44, 130, 0.636);
+    height:100%;
+    width:100%;
+  
 }
+
