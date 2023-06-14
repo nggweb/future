@@ -24,6 +24,7 @@ h2 {
     float: left;
     width: 60%;
     padding: 0 0 0 30px;
+    color: #d8d1d1;
 }
 
 #sidebar {
@@ -85,6 +86,7 @@ input[type=submit] {
 /* comments */
 .comment {
     padding: 10px;
+    
 }
 
 .comment:nth-child(even) {
@@ -94,7 +96,7 @@ input[type=submit] {
 .comment .info {
     font-weight: bold;
     font-size: 12px;
-    color: #666;
+    color: #ebdfdf;
 }
 
 .blog-card {
